@@ -27,7 +27,7 @@ aecHelper.initialize();
 
 // 处理TTS音频(在播放之前)
 float[] ttsAudio = getTTSFromJavaAPI(); // 从Java API获取TTS PCM
-aecHelper.processTTSBeforePlayback(ttsAudio);
+aecHelper.processTTSReference(ttsAudio);
 
 // 播放TTS音频
 playTTSAudio(ttsAudio);

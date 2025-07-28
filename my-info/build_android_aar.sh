@@ -511,17 +511,15 @@ dependencies {
 EOF
 
 # 创建Java接口
-mkdir -p "$BUILD_DIR/android_project/app/src/main/java/com/webrtc/aec3"
+mkdir -p "$BUILD_DIR/android_project/app/src/main/java/cn/watchfun/webrtc"
 
-cat > "$BUILD_DIR/android_project/app/src/main/java/com/webrtc/aec3/WebRTCAEC3.java" << 'EOF'
+cat > "$BUILD_DIR/android_project/app/src/main/java/cn/watchfun/webrtc/WebRTCAEC3.java" << 'EOF'
 // Author: Jimmy Gan
 // Date: 2025-01-27
 // WebRTC AEC3 Android Java接口
 
-package com.webrtc.aec3;
+package cn.watchfun.webrtc;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.util.Log;
 
 /**
@@ -542,90 +540,89 @@ public class WebRTCAEC3 {
     
     private long nativeHandle = 0;
     private final int sampleRate;
-    private final int inputChannels;
-    private final int reverseChannels;
+    private final int numChannels;
     
     /**
      * 创建AEC3处理器
      * @param sampleRate 采样率 (推荐16000Hz)
-     * @param inputChannels 输入通道数 (推荐1-单声道)
-     * @param reverseChannels 参考信号通道数 (推荐1-单声道)
+     * @param numChannels 声道数 (推荐1-单声道)
      */
-    public WebRTCAEC3(int sampleRate, int inputChannels, int reverseChannels) {
+    public WebRTCAEC3(int sampleRate, int numChannels) {
         this.sampleRate = sampleRate;
-        this.inputChannels = inputChannels;
-        this.reverseChannels = reverseChannels;
+        this.numChannels = numChannels;
         
-        nativeHandle = nativeCreate(sampleRate, inputChannels, reverseChannels);
+        nativeHandle = nativeCreateProcessor(sampleRate, numChannels);
         if (nativeHandle == 0) {
             throw new RuntimeException("创建WebRTC AEC3处理器失败");
         }
         
-        Log.d(TAG, String.format("AEC3处理器已创建: 采样率=%d, 输入通道=%d, 参考通道=%d", 
-                                sampleRate, inputChannels, reverseChannels));
+        Log.d(TAG, String.format("AEC3处理器已创建: 采样率=%d, 声道数=%d, 句柄=%d", 
+                                sampleRate, numChannels, nativeHandle));
     }
     
     /**
      * 处理TTS参考信号
-     * 必须在播放TTS音频之前调用此方法
-     * @param ttsAudio TTS PCM音频数据 (float数组)
-     * @param samplesPerChannel 每个通道的采样数
+     * 必须在播放TTS音频之前或同时调用此方法
+     * @param reference TTS PCM音频数据 (float数组，范围[-1.0, 1.0])
+     * @param frameSize 帧大小
      * @return true成功, false失败
      */
-    public boolean processTTSReferenceStream(@NonNull float[] ttsAudio, int samplesPerChannel) {
+    public boolean processReference(float[] reference, int frameSize) {
         if (nativeHandle == 0) {
             Log.e(TAG, "AEC3处理器未初始化");
             return false;
         }
         
-        if (ttsAudio.length < samplesPerChannel * reverseChannels) {
-            Log.e(TAG, "TTS音频数据长度不足");
+        if (reference.length < frameSize * numChannels) {
+            Log.e(TAG, "参考音频数据长度不足");
             return false;
         }
         
-        int result = nativeProcessReverseStream(nativeHandle, ttsAudio, samplesPerChannel);
+        int result = nativeProcessReference(nativeHandle, reference, frameSize);
         return result == 0;
     }
     
     /**
-     * 处理麦克风捕获信号(移除回声)
-     * @param micAudio 麦克风PCM音频数据 (float数组，会被就地修改)
-     * @param samplesPerChannel 每个通道的采样数  
+     * 处理麦克风音频流(移除回声)
+     * @param nearEnd 麦克风PCM音频数据 (float数组，范围[-1.0, 1.0])
+     * @param farEnd 远端音频数据 (可为null或零数组)
+     * @param output 输出处理后的音频数据 (float数组)
+     * @param frameSize 帧大小
      * @return true成功, false失败
      */
-    public boolean processMicrophoneStream(@NonNull float[] micAudio, int samplesPerChannel) {
+    public boolean processStream(float[] nearEnd, float[] farEnd, float[] output, int frameSize) {
         if (nativeHandle == 0) {
             Log.e(TAG, "AEC3处理器未初始化");
             return false;
         }
         
-        if (micAudio.length < samplesPerChannel * inputChannels) {
-            Log.e(TAG, "麦克风音频数据长度不足");
+        if (nearEnd.length < frameSize * numChannels || 
+            output.length < frameSize * numChannels) {
+            Log.e(TAG, "音频数据长度不足");
             return false;
         }
         
-        int result = nativeProcessCaptureStream(nativeHandle, micAudio, samplesPerChannel);
+        // 如果没有远端数据，创建零数组
+        if (farEnd == null) {
+            farEnd = new float[frameSize * numChannels];
+        }
+        
+        int result = nativeProcessStream(nativeHandle, nearEnd, farEnd, output, frameSize);
         return result == 0;
     }
     
     /**
-     * 设置音频流延迟
-     * @param delayMs 延迟毫秒数(通常20-100ms，根据设备调整)
+     * 获取采样率
      */
-    public void setStreamDelay(int delayMs) {
-        if (nativeHandle != 0) {
-            nativeSetStreamDelay(nativeHandle, delayMs);
-            Log.d(TAG, "设置流延迟: " + delayMs + "ms");
-        }
+    public int getSampleRate() {
+        return sampleRate;
     }
     
     /**
-     * 获取回声返回损耗增强(ERLE)指标
-     * @return ERLE值(dB)，-1表示无效
+     * 获取声道数
      */
-    public float getEchoReturnLossEnhancement() {
-        if (nativeHandle == 0) return -1.0f;
-        return nativeGetERLE(nativeHandle);
+    public int getNumChannels() {
+        return numChannels;
     }
     
     /**
@@ -633,7 +630,7 @@ public class WebRTCAEC3 {
      */
     public void release() {
         if (nativeHandle != 0) {
-            nativeDestroy(nativeHandle);
+            nativeDestroyProcessor(nativeHandle);
             nativeHandle = 0;
             Log.d(TAG, "AEC3处理器已释放");
         }
@@ -645,23 +642,21 @@ public class WebRTCAEC3 {
         super.finalize();
     }
     
-    // 原生方法声明
-    private native long nativeCreate(int sampleRate, int inputChannels, int reverseChannels);
-    private native void nativeDestroy(long handle);
-    private native int nativeProcessReverseStream(long handle, float[] reverseAudio, int samplesPerChannel);
-    private native int nativeProcessCaptureStream(long handle, float[] captureAudio, int samplesPerChannel);
-    private native void nativeSetStreamDelay(long handle, int delayMs);
-    private native float nativeGetERLE(long handle);
+    // 原生方法声明 - 这些方法名必须与JNI实现完全匹配
+    public native long nativeCreateProcessor(int sampleRate, int numChannels);
+    public native void nativeDestroyProcessor(long handle);
+    public native int nativeProcessStream(long handle, float[] nearEnd, float[] farEnd, float[] output, int frameSize);
+    public native int nativeProcessReference(long handle, float[] reference, int frameSize);
 }
 EOF
 
-# 创建使用示例
-cat > "$BUILD_DIR/android_project/app/src/main/java/com/webrtc/aec3/AEC3Helper.java" << 'EOF'
+# 创建使用示例辅助类
+cat > "$BUILD_DIR/android_project/app/src/main/java/cn/watchfun/webrtc/AEC3Helper.java" << 'EOF'
 // Author: Jimmy Gan
 // Date: 2025-01-27
-// WebRTC AEC3使用示例
+// WebRTC AEC3使用示例辅助类
 
-package com.webrtc.aec3;
+package cn.watchfun.webrtc;
 
 import android.util.Log;
 
@@ -683,11 +678,7 @@ public class AEC3Helper {
      */
     public boolean initialize() {
         try {
-            aec3Processor = new WebRTCAEC3(SAMPLE_RATE, CHANNELS, CHANNELS);
-            
-            // 根据设备调整延迟(需要根据实际设备测试调整)
-            aec3Processor.setStreamDelay(50); // 50ms默认延迟
-            
+            aec3Processor = new WebRTCAEC3(SAMPLE_RATE, CHANNELS);
             Log.i(TAG, "AEC3处理器初始化成功");
             return true;
         } catch (Exception e) {
@@ -697,11 +688,11 @@ public class AEC3Helper {
     }
     
     /**
-     * 处理来自Java API的TTS PCM流
+     * 处理TTS PCM流作为参考信号
      * 在播放TTS音频之前调用此方法
-     * @param ttsPcmData TTS PCM数据
+     * @param ttsPcmData TTS PCM数据 (float数组)
      */
-    public void processTTSBeforePlayback(float[] ttsPcmData) {
+    public void processTTSReference(float[] ttsPcmData) {
         if (aec3Processor == null) {
             Log.e(TAG, "AEC3处理器未初始化");
             return;
@@ -713,7 +704,7 @@ public class AEC3Helper {
             float[] frame = new float[SAMPLES_PER_FRAME];
             System.arraycopy(ttsPcmData, offset, frame, 0, SAMPLES_PER_FRAME);
             
-            if (!aec3Processor.processTTSReferenceStream(frame, SAMPLES_PER_FRAME)) {
+            if (!aec3Processor.processReference(frame, SAMPLES_PER_FRAME)) {
                 Log.w(TAG, "处理TTS参考流失败，偏移: " + offset);
             }
             
@@ -723,7 +714,7 @@ public class AEC3Helper {
     
     /**
      * 处理麦克风捕获的音频(移除回声)
-     * @param micPcmData 麦克风PCM数据(会被就地修改)
+     * @param micPcmData 麦克风PCM数据 (float数组)
      * @return 处理后的干净音频
      */
     public float[] processMicrophoneAudio(float[] micPcmData) {
@@ -732,33 +723,29 @@ public class AEC3Helper {
             return micPcmData;
         }
         
+        float[] cleanAudio = new float[micPcmData.length];
+        
         // 按帧处理麦克风数据
         int offset = 0;
         while (offset + SAMPLES_PER_FRAME <= micPcmData.length) {
-            float[] frame = new float[SAMPLES_PER_FRAME];
-            System.arraycopy(micPcmData, offset, frame, 0, SAMPLES_PER_FRAME);
+            float[] nearEnd = new float[SAMPLES_PER_FRAME];
+            float[] output = new float[SAMPLES_PER_FRAME];
             
-            if (aec3Processor.processMicrophoneStream(frame, SAMPLES_PER_FRAME)) {
-                // 复制处理后的数据回原数组
-                System.arraycopy(frame, 0, micPcmData, offset, SAMPLES_PER_FRAME);
+            System.arraycopy(micPcmData, offset, nearEnd, 0, SAMPLES_PER_FRAME);
+            
+            if (aec3Processor.processStream(nearEnd, null, output, SAMPLES_PER_FRAME)) {
+                // 复制处理后的数据到输出数组
+                System.arraycopy(output, 0, cleanAudio, offset, SAMPLES_PER_FRAME);
             } else {
                 Log.w(TAG, "处理麦克风流失败，偏移: " + offset);
+                // 失败时使用原始数据
+                System.arraycopy(nearEnd, 0, cleanAudio, offset, SAMPLES_PER_FRAME);
             }
             
             offset += SAMPLES_PER_FRAME;
         }
         
-        return micPcmData;
-    }
-    
-    /**
-     * 获取AEC性能指标
-     */
-    public void logAECMetrics() {
-        if (aec3Processor != null) {
-            float erle = aec3Processor.getEchoReturnLossEnhancement();
-            Log.i(TAG, "当前ERLE(回声返回损耗增强): " + erle + " dB");
-        }
+        return cleanAudio;
     }
     
     /**
@@ -814,10 +801,6 @@ echo "========== 打包AAR =========="
 AAR_DIR="$OUTPUT_DIR/aar"
 mkdir -p "$AAR_DIR"/{libs,jni,META-INF}
 
-# 复制Java源文件到AAR
-mkdir -p "$AAR_DIR/classes"
-cp -r "$BUILD_DIR/android_project/app/src/main/java/"* "$AAR_DIR/classes/"
-
 # 复制原生库文件
 for abi in "${ANDROID_ABIS[@]}"; do
     if [ -f "$BUILD_DIR/build_$abi/libwebrtc_aec3.so" ]; then
@@ -833,7 +816,7 @@ cat > "$AAR_DIR/AndroidManifest.xml" << 'EOF'
 <!-- Author: Jimmy Gan -->
 <!-- Date: 2025-01-27 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.webrtc.aec3">
+    package="cn.watchfun.webrtc">
     
     <uses-sdk android:minSdkVersion="27" android:targetSdkVersion="33" />
     
@@ -845,9 +828,46 @@ cat > "$AAR_DIR/AndroidManifest.xml" << 'EOF'
 </manifest>
 EOF
 
-# 创建classes.jar (空的，因为我们只有原生代码)
-cd "$AAR_DIR/classes"
-jar cf "$AAR_DIR/classes.jar" -C . . 2>/dev/null || touch "$AAR_DIR/classes.jar"
+# 编译并打包Java源文件到AAR
+echo "========== 编译Java源文件 =========="
+
+# 创建Java编译目录
+JAVA_SRC_DIR="$BUILD_DIR/android_project/app/src/main/java"
+JAVA_BUILD_DIR="$BUILD_DIR/java_build"
+mkdir -p "$JAVA_BUILD_DIR"
+
+# 检查Android SDK路径
+if [ -z "$ANDROID_HOME" ]; then
+    export ANDROID_HOME="/Users/mac/Library/Android/sdk"
+fi
+
+ANDROID_JAR="$ANDROID_HOME/platforms/android-33/android.jar"
+
+if [ ! -f "$ANDROID_JAR" ]; then
+    echo "❌ Android JAR not found: $ANDROID_JAR"
+    echo "请确保Android SDK已安装且ANDROID_HOME环境变量正确"
+    exit 1
+fi
+
+# 编译Java源文件
+echo "编译Java源文件..."
+javac -d "$JAVA_BUILD_DIR" \
+      -classpath "$ANDROID_JAR" \
+      -sourcepath "$JAVA_SRC_DIR" \
+      "$JAVA_SRC_DIR/cn/watchfun/webrtc"/*.java
+
+if [ $? -ne 0 ]; then
+    echo "❌ Java编译失败"
+    exit 1
+fi
+
+# 创建classes.jar
+echo "创建classes.jar..."
+cd "$JAVA_BUILD_DIR"
+jar cf "$AAR_DIR/classes.jar" .
+cd - > /dev/null
+
+echo "✅ Java编译和打包完成"
 
 # 打包AAR文件
 cd "$AAR_DIR"
@@ -885,7 +905,7 @@ aecHelper.initialize();
 
 // 处理TTS音频(在播放之前)
 float[] ttsAudio = getTTSFromJavaAPI(); // 从Java API获取TTS PCM
-aecHelper.processTTSBeforePlayback(ttsAudio);
+aecHelper.processTTSReference(ttsAudio);
 
 // 播放TTS音频
 playTTSAudio(ttsAudio);

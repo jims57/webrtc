@@ -1,0 +1,5 @@
+I'd like to implement acoustic echo cancellation(AEC), i plan to use cpp or c solution, so that i can write xcframework sdk for ios and aar for android. tell me the best solution, i'd like this AEC solution won't feed the sound from the speakers of my ios app or android app back into the microphone in the mobile phone. 
+
+Our ios and android will send text to our custom java api and then the java api will respond pcm streams to our app, so i think we can capture these pcm streams used for tts playback by speakers, and our android app is using API level >=27. in this case, tell me a cross platform solution using cpp with webRTC AEC to remove echo of tts
+
+aec quality is important for me, if aec3 is acceptable, i prefer to use WebRTC ace3 for it has better performance in AEC

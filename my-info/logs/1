@@ -1,0 +1,9 @@
+(base) mac@jims57 WebRTC_AEC3 % ./build_webrtc_android.sh
+Building official WebRTC for Android...
+✅ Using existing ninja binary
+✅ Build tools ready: gn=/Users/mac/Documents/GitHub/wq_aec/WebRTC_AEC3/src/gn, ninja=/Users/mac/Documents/GitHub/wq_aec/WebRTC_AEC3/src/ninja
+Setting ANDROID_NDK_ROOT to user specified path...
+✅ Using Android NDK: /Users/mac/Library/Android/sdk/ndk/25.2.9519653
+Building official WebRTC for arm64-v8a (arm64)...
+ERROR at //.gn:38:48: No value named "exec_script_allowlist" in scope "build_dotfile_settings"
+exec_script_allowlist = build_dotfile_settings.exec_script_allowlist +

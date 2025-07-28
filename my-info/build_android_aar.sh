@@ -446,6 +446,12 @@ target_compile_options(webrtc_aec3 PRIVATE
     -Wno-unused-parameter
     -Wno-missing-field-initializers
 )
+
+# 链接选项 - 使用静态链接C++标准库
+target_link_options(webrtc_aec3 PRIVATE
+    -static-libstdc++
+    -static-libgcc
+)
 EOF
 
 echo "========== 创建Android项目结构 =========="

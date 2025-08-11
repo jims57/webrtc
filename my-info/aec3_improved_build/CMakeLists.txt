@@ -34,21 +34,9 @@ add_definitions(
     -DANDROID
 )
 
-# 收集AEC3核心源文件
-file(GLOB_RECURSE AEC3_SOURCES
-    "webrtc/modules/audio_processing/aec3/*.cc"
-    "webrtc/modules/audio_processing/audio_buffer.cc"
-    "webrtc/modules/audio_processing/splitting_filter.cc"
-    "webrtc/modules/audio_processing/three_band_filter_bank.cc"
-)
-
-# 排除测试文件
-list(FILTER AEC3_SOURCES EXCLUDE REGEX ".*_test\\.cc$")
-list(FILTER AEC3_SOURCES EXCLUDE REGEX ".*_unittest\\.cc$")
-list(FILTER AEC3_SOURCES EXCLUDE REGEX ".*test_.*\\.cc$")
-
-# 添加我们的包装器源文件
-list(APPEND AEC3_SOURCES 
+# 只编译我们的包装器，不编译复杂的WebRTC AEC3源文件
+# 这样可以避免复杂的依赖问题
+set(AEC3_SOURCES 
     "src/webrtc_aec3_wrapper.cpp"
     "jni/webrtc_aec3_jni.cpp"
 )

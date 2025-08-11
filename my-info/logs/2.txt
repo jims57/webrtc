@@ -1,0 +1,552 @@
+ error generated/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h.
+:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o] Error 1
+1 error generated.
+1 error generated.
+1 error generated.
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/system_wrappers/include/metrics.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o] Error 1
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o] Error 1
+1 error generated.
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o] Error 1
+make[1]: *** [CMakeFiles/webrtc_aec3_static.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc:14:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc.o] Error 1
+make[1]: *** [CMakeFiles/webrtc_aec3.dir/all] Error 2
+make: *** [all] Error 2
+❌ armeabi-v7a 构建失败
+构建 x86_64...
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)
+  CMakeLists.txt:6 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  /usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)
+  CMakeLists.txt:6 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  build_x86_64/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt:6 (project)
+
+
+-- The C compiler identification is Clang 14.0.7
+-- The CXX compiler identification is Clang 14.0.7
+-- Detecting C compiler ABI info
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/CMakeScratch/TryCompile-R4TabU/CMakeLists.txt:4 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/CMakeScratch/TryCompile-R4TabU/CMakeLists.txt:4 (project)
+
+
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/mac/Library/Android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/CMakeScratch/TryCompile-412DCd/CMakeLists.txt:4 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64/CMakeFiles/CMakeScratch/TryCompile-412DCd/CMakeLists.txt:4 (project)
+
+
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/mac/Library/Android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (3.2s)
+-- Generating done (0.2s)
+-- Build files have been written to: /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86_64
+[  0%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o
+[  1%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o
+[  1%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o
+[  3%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o
+[  5%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o
+[  5%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o
+[  5%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o
+[  5%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o
+[  7%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o
+[  7%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o
+[  9%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o
+[ 10%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o
+[ 10%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o
+[ 10%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o
+[ 12%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o
+[ 12%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc:10:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.h:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/audio_buffer.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/common_audio/channel_buffer.h:18:10: fatal error: 'common_audio/include/audio_util.h' file not found
+#include "common_audio/include/audio_util.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.cc:11:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.h:19:10: fatal error: 'absl/types/optional.h' file not found
+#include "absl/types/optional.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.cc:11:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.h:19:10: fatal error: 'absl/types/optional.h' file not found
+#include "absl/types/optional.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc:10:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.h:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/audio_buffer.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/common_audio/channel_buffer.h:18:10: fatal error: 'common_audio/include/audio_util.h' file not found
+#include "common_audio/include/audio_util.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_processor.cc:15:10: fatal error: 'absl/types/optional.h' file not found
+#include "absl/types/optional.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_processor.cc:15:10: fatal error: 'absl/types/optional.h' file not found
+#include "absl/types/optional.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_common.cc:15:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_common.cc:15:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+1 error generated.
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o] Error 1
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o] Error 1
+1 error generated.
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o] Error 1
+[ 13%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc.o
+1 error generated.
+1 error generated.
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o] Error 1
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.h:18:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.h:18:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/system_wrappers/include/metrics.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/system_wrappers/include/metrics.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+1 error generated.
+1 error generated.
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o] Error 1
+1 error generated.
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o] Error 1
+1 error generated.
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o] Error 1
+make[1]: *** [CMakeFiles/webrtc_aec3.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc:14:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc.o] Error 1
+make[1]: *** [CMakeFiles/webrtc_aec3_static.dir/all] Error 2
+make: *** [all] Error 2
+❌ x86_64 构建失败
+构建 x86...
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)
+  CMakeLists.txt:6 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  /usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)
+  CMakeLists.txt:6 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  build_x86/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt:6 (project)
+
+
+-- The C compiler identification is Clang 14.0.7
+-- The CXX compiler identification is Clang 14.0.7
+-- Detecting C compiler ABI info
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/CMakeScratch/TryCompile-g63Pae/CMakeLists.txt:4 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/CMakeScratch/TryCompile-g63Pae/CMakeLists.txt:4 (project)
+
+
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/mac/Library/Android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/CMakeScratch/TryCompile-FMKXfn/CMakeLists.txt:4 (project)
+
+
+CMake Deprecation Warning at /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:34 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  /Users/mac/Library/Android/sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/3.31.5/CMakeSystem.cmake:6 (include)
+  /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86/CMakeFiles/CMakeScratch/TryCompile-FMKXfn/CMakeLists.txt:4 (project)
+
+
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/mac/Library/Android/sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (3.2s)
+-- Generating done (0.2s)
+-- Build files have been written to: /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/build_x86
+[  0%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o
+[  2%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o
+[  2%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o
+[  2%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o
+[  2%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o
+[  3%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o
+[  5%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o
+[  5%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o
+[  6%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o
+[  7%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o
+[  7%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o
+[  8%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o
+[ 10%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o
+[ 10%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o
+[ 11%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc.o
+[ 12%] Building CXX object CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc:10:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.h:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/audio_buffer.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/common_audio/channel_buffer.h:18:10: fatal error: 'common_audio/include/audio_util.h' file not found
+#include "common_audio/include/audio_util.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc:10:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_delay_buffer.h:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/audio_buffer.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/common_audio/channel_buffer.h:18:10: fatal error: 'common_audio/include/audio_util.h' file not found
+#include "common_audio/include/audio_util.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_processor.cc:15:10: fatal error: 'absl/types/optional.h' file not found
+#include "absl/types/optional.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.cc:11:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.h:19:10: fatal error: 'absl/types/optional.h' file not found
+#include "absl/types/optional.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.cc:11:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec_state.h:19:10: fatal error: 'absl/types/optional.h' file not found
+#include "absl/types/optional.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_common.cc:15:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_common.cc:15:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/aec3_fft.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc:14:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_common.cc.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+11 error generated.
+ error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec3_fft.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o] Error 1
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_delay_buffer.cc.o] Error 1
+[ 12%] Building CXX object CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/cascaded_biquad_filter.cc.o
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.h:18:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/block_framer.h:16:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+1 error generated.
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc:11:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.h:18:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o] Error 1
+1 error generated.
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/system_wrappers/include/metrics.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/aec_state.cc.o] Error 1
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc:17:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/system_wrappers/include/metrics.h:20:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o] Error 1
+1 error generated.
+1 error generated.
+1 error generated.
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/block_framer.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor_metrics.cc.o] Error 1
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o] Error 1
+make[2]: *** [CMakeFiles/webrtc_aec3_static.dir/webrtc/modules/audio_processing/aec3/api_call_jitter_metrics.cc.o] Error 1
+make[1]: *** [CMakeFiles/webrtc_aec3_static.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/adaptive_fir_filter.cc.o] Error 1
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/block_processor.cc.o] Error 1
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/cascaded_biquad_filter.cc:10:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/modules/audio_processing/aec3/cascaded_biquad_filter.h:18:
+In file included from /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/api/array_view.h:18:
+/Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/webrtc/rtc_base/checks.h:45:10: fatal error: 'absl/strings/string_view.h' file not found
+#include "absl/strings/string_view.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/webrtc_aec3.dir/webrtc/modules/audio_processing/aec3/cascaded_biquad_filter.cc.o] Error 1
+make[1]: *** [CMakeFiles/webrtc_aec3.dir/all] Error 2
+make: *** [all] Error 2
+❌ x86 构建失败
+========== 打包AAR ==========
+========== 编译Java源文件 ==========
+编译Java源文件...
+注: /Users/mac/Documents/GitHub/webrtc/my-info/aec3_improved_build/android_project/src/main/java/cn/watchfun/webrtc/WebRTCAEC3.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+创建classes.jar...
+✅ Java编译和打包完成
+  adding: AndroidManifest.xml (deflated 39%)
+  adding: META-INF/ (stored 0%)
+  adding: classes.jar (deflated 13%)
+  adding: libs/ (stored 0%)
+  adding: jni/ (stored 0%)
+========== 创建集成文档 ==========
+✅ 改进的WebRTC AEC3 Android AAR构建完成!
+
+构建输出:
+  AAR文件: /Users/mac/Documents/GitHub/webrtc/my-info/android_output_improved/webrtc-aec3-improved.aar
+  集成文档: /Users/mac/Documents/GitHub/webrtc/my-info/android_output_improved/README-IMPROVED-INTEGRATION.md
+
+AAR文件大小: 4.0K
+
+支持的Android架构:
+  ❌ arm64-v8a (构建失败)
+  ❌ armeabi-v7a (构建失败)
+  ❌ x86_64 (构建失败)
+  ❌ x86 (构建失败)
